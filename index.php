@@ -42,7 +42,6 @@ $pacientes = $conn->query($sqlPacientes);
       </nav>
 
      <div>
-        
             <div class="propietario">
         <img src="Assets/logo.png" alt="Torre_Medica"> 
      </div>
@@ -54,7 +53,6 @@ $pacientes = $conn->query($sqlPacientes);
     <div class="container">
     <div>
     <a href="#" class="btn" data-modal-open="nuevoModal">Nuevo Paciente</a>
-
     </div>
     <table>
         <thead>

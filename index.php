@@ -89,12 +89,12 @@ $pacientes = $conn->query($sqlPacientes);
             ?>
             
 
-            <?php include 'Views/nuevoModal.php'; ?>
+            <?php include 'nuevoModal.php'; ?>
 
             <?php $especialidades->data_seek(0); ?>
             
-            <?php include 'Views/editaModal.php'; ?>
-            <?php include 'Views/eliminaModal.php'; ?>
+            <?php include 'editaModal.php'; ?>
+            <?php include 'eliminaModal.php'; ?>
 
 
     </main>

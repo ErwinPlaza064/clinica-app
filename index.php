@@ -89,7 +89,7 @@ $pacientes = $conn->query($sqlPacientes);
             ?>
             
             <?php
-              if (file_exists('/var/www/html/clinica-app/Modals/nuevomodal.php')) {
+              if (file_exists('/var/www/html/clinica-app/nuevomodal.php')) {
               include '/var/www/html/clinica-app/nuevomodal.php';
               } else {
               echo "El archivo nuevomodal.php no se encuentra.";
@@ -99,14 +99,14 @@ $pacientes = $conn->query($sqlPacientes);
             <?php $especialidades->data_seek(0); ?>
             
             <?php
-              if (file_exists('/var/www/html/clinica-app/Modals/editamodal.php')) {
+              if (file_exists('/var/www/html/clinica-app/editamodal.php')) {
               include '/var/www/html/clinica-app/editamodal.php';
               } else {
               echo "El archivo editamodal.php no se encuentra.";
             }
             ?>
              <?php
-              if (file_exists('/var/www/html/clinica-app/Modals/eliminamodal.php')) {
+              if (file_exists('/var/www/html/clinica-app/eliminamodal.php')) {
               include '/var/www/html/clinica-app/eliminamodal.php';
               } else {
               echo "El archivo eliminamodal.php no se encuentra.";

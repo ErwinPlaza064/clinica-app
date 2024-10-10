@@ -31,25 +31,42 @@ $pacientes = $conn->query($sqlPacientes);
     </div>
       <nav class="navegacion">
         <ul>
+        <li>
+            <a id="torre" class="torrem">
+            <ion-icon name="bag-add-outline"></ion-icon>
+              <span>TorreMedica</span>
+              
+            </a>
+          </li>
           <li>
             <a id="paciente"href="#">
               <ion-icon name="person-outline"></ion-icon>
-              <span>Paciente</span>
+              <span>Pacientes</span>
               
             </a>
+          </li>
+          <li>
+            <a>
+            <ion-icon name="walk-outline"></ion-icon>
+              <span>Doctores</span>
+              
+            </a>
+          </li>
         </ul>
         <span class="line-bottom"></span>
       </nav>
 
      <div>
             <div class="propietario">
-        <img src="Assets/logo.png" alt="Torre_Medica"> 
+        <img src="Img/logo.png" alt="Torre_Medica"> 
      </div>
      </div>
-
     </div>
+    
+  
+    <h1 style="text-align: center; margin-left:200px; padding: 250px;">Bienvenido a la clinica</h1>
 
-    <main>
+    <main style="display: none;">
     <div class="container">
     <div>
     <a href="#" class="btn" data-modal-open="nuevoModal">Nuevo Paciente</a>
@@ -83,14 +100,15 @@ $pacientes = $conn->query($sqlPacientes);
     </table>
 </div>
 
+
 <?php 
             $sqlEspecialidad = "SELECT id,nombre FROM especialidad";
             $especialidades = $conn->query($sqlEspecialidad);
             ?>
             
             <?php
-              if (file_exists('/var/www/html/clinica-app/nuevomodal.php')) {
-              include '/var/www/html/clinica-app/nuevomodal.php';
+              if (file_exists('nuevomodal.php')) {
+              include 'nuevomodal.php';
               } else {
               echo "El archivo nuevomodal.php no se encuentra.";
             }
@@ -99,15 +117,15 @@ $pacientes = $conn->query($sqlPacientes);
             <?php $especialidades->data_seek(0); ?>
             
             <?php
-              if (file_exists('/var/www/html/clinica-app/editamodal.php')) {
-              include '/var/www/html/clinica-app/editamodal.php';
+              if (file_exists('editamodal.php')) {
+              include 'editamodal.php';
               } else {
               echo "El archivo editamodal.php no se encuentra.";
             }
             ?>
              <?php
-              if (file_exists('/var/www/html/clinica-app/eliminamodal.php')) {
-              include '/var/www/html/clinica-app/eliminamodal.php';
+              if (file_exists('eliminamodal.php')) {
+              include 'eliminamodal.php';
               } else {
               echo "El archivo eliminamodal.php no se encuentra.";
             }
@@ -121,5 +139,6 @@ $pacientes = $conn->query($sqlPacientes);
     <script src="Js/ScriptM.js"></script>
     <script src="Js/Modales.js"></script>
     <script src="Js/Script.js"></script>
+    <script src="Js/Style.js"></script>
   </body>
 </html>

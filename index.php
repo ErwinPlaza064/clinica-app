@@ -63,10 +63,10 @@ $pacientes = $conn->query($sqlPacientes);
      </div>
     </div>
     
-    <section style="padding: 50px;">
-    <h1 style="text-align: center; margin-left:200px;">Bienvenido a la clinica</h1>
-    <p style="text-align: center; margin-left:200px;">Selecciona una opccion</p>
-    <div style="display: flex; justify-content: center; align-items: center; height: 100px; margin-left:200px; margin-top:130px;">
+    <section style="padding: 50px; margin-left: 200px;">
+    <h1 style="text-align: center;">Bienvenido a la clinica</h1>
+    <p style="text-align: center;">Selecciona una opccion</p>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100px; margin-top:130px;">
     <img src="Img/welcome.svg" alt="" style="width: 300px;">
     </div>
     </section>
@@ -142,8 +142,6 @@ $pacientes = $conn->query($sqlPacientes);
             }
             ?>
         
-
-
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

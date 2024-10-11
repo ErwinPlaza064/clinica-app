@@ -378,6 +378,17 @@ main.min-main {
   margin-left: 80px;
 }
 
+section {
+  display: none;
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.5s ease;
+}
+
+section.min-section {
+  margin-left: 80px;
+}
+
 @media (max-height: 660px) {
   .barra-lateral .nombre-pagina {
     margin-bottom: 5px;
@@ -401,7 +412,14 @@ main.min-main {
   main {
     margin-left: 0;
   }
-  main.min-main {
+  main.min-section {
+    margin-left: 0;
+  }
+
+  section {
+    margin-left: 0;
+  }
+  section.min-section {
     margin-left: 0;
   }
 }

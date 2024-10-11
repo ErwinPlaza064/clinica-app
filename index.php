@@ -63,8 +63,13 @@ $pacientes = $conn->query($sqlPacientes);
      </div>
     </div>
     
-  
-    <h1 style="text-align: center; margin-left:200px; padding: 250px;">Bienvenido a la clinica</h1>
+    <section>
+    <h1 style="text-align: center; margin-left:200px;">Bienvenido a la clinica</h1>
+    <h2 style="text-align: center; margin-left:200px;">Selecciona una opccion</h2>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100px; margin-left:200px; margin-top:130px;">
+    <img src="Img/welcome.svg" alt="" style="width: 300px;">
+    </div>
+    </section>
 
     <main style="display: none;">
     <div class="container">

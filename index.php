@@ -88,19 +88,25 @@ $pacientes = $conn->query($sqlPacientes);
             </tr>
         </thead>
         <tbody>
-            <?php while ($row_paciente = $pacientes->fetch_assoc()) { ?>
+          <?php if ($pacientes->num_rows > 0): ?>
+            <?php while ($row_paciente = $pacientes->fetch_assoc()): ?>
             <tr>
-                <td><?= $row_paciente['id']; ?></td>
-                <td><?= $row_paciente['nombre']; ?></td>
-                <td><?= $row_paciente['apellido']; ?></td>
-                <td><?= $row_paciente['especialidad']; ?></td>
-                <td><?= $row_paciente['fecha']; ?></td>
-                <td>
-                <a href="#" class="btn btn-primary" data-id="<?= $row_paciente['id']; ?>" data-modal-open="editaModal">Editar</a>
-                <a href="#" class="btn btn-danger" data-id="<?= $row_paciente['id']; ?>" data-modal-open="eliminaModal">Eliminar</a>
-                </td>
+              <td><?= htmlspecialchars($row_paciente['id']); ?></td>
+              <td><?= htmlspecialchars($row_paciente['nombre']); ?></td>
+              <td><?= htmlspecialchars($row_paciente['apellido']); ?></td>
+              <td><?= htmlspecialchars($row_paciente['especialidad']); ?></td>
+              <td><?= htmlspecialchars($row_paciente['fecha']); ?></td>
+              <td>
+                <a href="#" class="btn btn-primary" data-id="<?= htmlspecialchars($row_paciente['id']); ?>" data-modal-open="editaModal">Editar</a>
+                <a href="#" class="btn btn-danger" data-id="<?= htmlspecialchars($row_paciente['id']); ?>" data-modal-open="eliminaModal">Eliminar</a>
+              </td>
             </tr>
-            <?php } ?>
+            <?php endwhile; ?>
+          <?php else: ?>
+            <tr>
+              <td colspan="6">No hay pacientes registrados</td>
+            </tr>
+          <?php endif; ?>
         </tbody>
     </table>
 </div>
